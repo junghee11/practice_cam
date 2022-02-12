@@ -18,63 +18,46 @@
           <div class="container">
             <div id="until-right">
                 <ul>
-                    ::before
                     <li><a href="#">로그인</a></li>
                     <li><a href="#">장바구니</a></li>
                     <li><a href="#">마이페이지</a></li>
-                    ::after
                 </ul>
             </div>
           </div>
         </div>
         <div id="main-header">
             <div class="container">
-                <div class="row">
-                    <div class="col" id="header-logo">
+                <div class="row" style="height:60px;">
+                    <div id="header-logo" style="width: 200px;">
                         <div class="logo">
                             <a href="#" alt="logo"><img src="img/logo.png" alt="" class="img-hover-zoom"></a>
                         </div>
                     </div>
                     <!-- width 1280 이하로 가면 없앨것 -->
                     <div class="col" id="header-nav">
-                        <nav id="header-navgation">
-                            <div id="main-menu">
-                                <ul id="main-nav">
-                                    <li class="menu-item">
-                                        <a href="#">
-                                            "Shop"
-                                            ::after
-                                        </a>
-                                        <!-- <div class="sub-menu">
-                                            <div class="sub-menu-inner">
-                                                <div class="row">
-                                                    <div class="col">
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div> -->
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="#">
-                                            "Review"
-                                            ::after
-                                        </a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="#">
-                                            "어디가지?"
-                                            ::after
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav>
+                        <ul id="main-nav">
+                            <li class="menu-item">
+                                <a href="#">SHOP</a>
+                                <div class="sub-menu" style="display:none;">
+                                    <div class="sub-menu-inner">
+                                      <ul>
+                                          <li>텐트</li>
+                                      </ul>  
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">REVIEW</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">PLACE</a>
+                            </li>
+                        </ul>
                     </div>
                     <div class="col" id="mobile">
                         <div id="header-right">
                             <form action="get">
-                                <input type="text">
+                                <input type="text" style="width: 210px; border: none; outline:none;">
                                 <input id=search-btn type="button">
                             </form>
                         </div>
@@ -85,7 +68,7 @@
     </header>
     <div id="mid">
         <div class="container" style="overflow:auto;">
-            <img src="img/1.jpg" alt="camping" >
+            <img src="img/1.jpg" alt="camping" id="camping">
         </div>
     </div>
     <footer>
