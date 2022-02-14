@@ -3,10 +3,13 @@
   from{left: 100%;}
   to{left:80%;}
 }
+*/
 @keyframes menu{
-  from{height: 0px;}
-  to{height:310px;}
-} */
+  from{ top: 30px}
+  to {top:0}
+  /* from{height: 0px;}
+  to{height:180px;} */
+} 
 * { 
     margin: 0;
     padding:0;
@@ -24,6 +27,7 @@
 #until-right ul a {text-decoration-line: none;
                    font-size:13px;
                   color: gray;}
+#until-right ul a:hover {color:cornflowerblue;}
 /* #until-right ul li:nth-child(1)::after {padding-left:15px; content:"|"}
 #until-right ul li:nth-child(2)::after {padding-left:15px; content:"|"} */
 #until-right ul li::before {padding-right:15px; padding-left:15px; 
@@ -40,7 +44,8 @@
            text-align: center;}
 #main-nav li {list-style: none;
               display: inline;
-              margin: 0 30px;}
+              width: 40px;
+              margin: 0 60px;}
 #main-nav li::after {background:url(img/after.png) no-repeat 0px 0px;
                      content:"";
                      display: inline-block;
@@ -48,6 +53,7 @@
                      width: 10px;
                      margin-top: 17px;
                      background-size: 100%;}
+#main-nav li a:hover {color:black;}
 #main-nav li a {text-decoration: none;
                 color:gray;
                 font-weight: 500;
@@ -63,3 +69,27 @@
              margin-top:3px;
              border: 0;
              background-size : 100%;}
+.sub-menu { width: 700px;
+            /* border: 1px solid gray; */
+            position:absolute; 
+            /* display:none; */
+}
+.sub-menu-inner { 
+            position:relative; 
+            background-color:white;
+            width: 160px;
+            height: 180px;
+            padding-top: 15px;
+            /* border: 1px solid white; */
+}
+.sub-menu-inner dl { margin-top: 20px;}
+.sub-menu-inner dl dd {
+  font-size: 13px;
+            margin: 15px 0;
+}
+.sub-menu-inner dl dd:hover::before {
+                padding-right:2px; 
+                padding-left:2px; 
+                content:"-";
+                color: gray; }
+/* .sub-menu-inner dl dd a {font-size: 10px;} */
