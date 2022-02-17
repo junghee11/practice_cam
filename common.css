@@ -15,6 +15,7 @@
     padding:0;
     font-family: 'Noto Sans Kr','맑은 고딕', '돋움', 'sans-serif';
 }
+#camping {width: 1279px;}
 #top-until {display: flex;
             height: 40px;
             border-bottom: 1px solid gray;}
@@ -57,7 +58,7 @@
 #main-nav li a:hover {color:black;}
 #main-nav li a {text-decoration: none;
                 color:gray;
-                font-weight: 600;
+                /* font-weight: 600; */
                 font-size: 19px;}
 #header-right { border : 1px solid gray;
                 height:37px;
@@ -86,8 +87,9 @@
 .sub-menu-inner dl { margin-top: 20px;}
 .sub-menu-inner dl dd {
             font-size: 13px;
-            margin: 15px 0;
-            cursor: pointer;
+            margin: 15px 0;}
+.sub-menu-inner dl dd a{
+            font-size: 13px;          
 }
 .sub-menu-inner dl dd:hover {font-weight: 600;}
 .sub-menu-inner dl dd:hover::before {
@@ -109,33 +111,6 @@
               background-color: gray;
               margin:5px;
 }
-#cat-main ul {margin: 20px auto;
-              height: 70px;}
-#cat-main ul li {
-                  list-style: none;
-                  display:inline-block;
-                  width: 230px;
-                  /* margin:0;
-                  padding:0; */
-                  }
-#cat-main li a {color:gray;
-                display:inline-block;
-                /* margin: 0 20px; */
-                border: 2px solid gray;
-                text-align: center;
-                line-height: 50px;
-                width: 170px;
-                height: 50px;
-                text-decoration:none;}
-#cat-main li a:hover {font-weight: 600;
-                      border: 3px solid rgb(80, 80, 80);
-                      
-}
-#cat-sub li {list-style: none;
-             display:inline;
-             border: 2px solid gray;}
-#cat-sub li a {color:gray;
-               text-decoration:none;}
 
 #footer {
   /* height: 150px;  */

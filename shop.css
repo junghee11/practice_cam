@@ -1,0 +1,38 @@
+#cat-main ul {
+    left: 0;
+    margin-top: 20px;
+    height: 70px;}
+#cat-main ul li {
+        list-style: none;
+        display:inline-block;
+        width: 195px;
+        margin: 0 20px;
+        }
+#cat-main li a {color:gray;
+      display:inline-block;
+      /* margin: 0 20px; */
+      border: 2px solid gray;
+      text-align: center;
+      line-height: 60px;
+      width: 195px;
+      height: 60px;
+      text-decoration:none;}
+#cat-main li a:hover {font-weight: 600;
+            text-decoration: underline;
+            color:cadetblue;
+            border: 2px solid rgb(80, 80, 80);
+            
+}
+.card {overflow: hidden;}
+.card img:hover {transform: scale(1.2);
+                 transition-duration: 1s;}
+.card-body {background-color: white;
+            z-index: 2;}
+#page { width: 100%;
+        text-align: center;
+        margin: 50px auto;}
+#page button {border: 1px solid rgb(80, 80, 80);
+              margin: 0 15px;
+              width: 40px;
+              height: 40px;}
+/* #cat-sub  {} */

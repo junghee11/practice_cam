@@ -8,6 +8,7 @@ document.addEventListener('scroll', function(){
         topLine.style.top="0px";
         topLine.style.left="0px";
         topLine.style.width="100%";
+        topLine.style.zIndex="10";
     } else {
         topLine.style.position = "static";
     }
