@@ -49,7 +49,7 @@
                                 
                             </li>
                             <li class="menu-item" onmouseleave="close_menu()">
-                              <b><a href="#" id="1" onmouseover="sub_menu()">REVIEW</a></b>
+                              <b><a href="review.html" id="1" onmouseover="sub_menu()">REVIEW</a></b>
                                 <div class="sub-menu">
                                     <div class="sub-menu-inner" style="left:270px; display:none;">
                                       <dl style="font-size: 14px;">
@@ -145,18 +145,17 @@
                     content : iwContent 
                     });
                     markers.push(marker);
+                     // 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
+                    kakao.maps.event.addListener(marker, 'click', function() {
+                    // 마커 위에 인포윈도우를 표시합니다
+                    infowindow.open(map, marker);  
+                });
                 }
 
                 // 마커가 지도 위에 표시되도록 설정합니다
-                marker.setMap(map);
+                // marker.setMap(map);
 
-//                iwPosition = new kakao.maps.LatLng(33.450701, 126.570667); //인포윈도우 표시 위치입니다
-                
-                // 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
-                kakao.maps.event.addListener(marker, 'click', function() {
-                // 마커 위에 인포윈도우를 표시합니다
-                infowindow.open(map, marker);  
-                });     
+                    
                 var clusterer = new kakao.maps.MarkerClusterer({
                 map: map, // 마커들을 클러스터로 관리하고 표시할 지도 객체 
                 averageCenter: true, // 클러스터에 포함된 마커들의 평균 위치를 클러스터 마커 위치로 설정 
