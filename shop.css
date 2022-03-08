@@ -24,6 +24,7 @@
             
 }
 .card {overflow: hidden;}
+.card img {width: 400px; height: 400px;}
 .card img:hover {transform: scale(1.2);
                  transition-duration: 1s;}
 .card-body {background-color: white;

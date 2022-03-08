@@ -1,0 +1,19 @@
+/* #category {margin-top: 150px;}
+#category h3 {margin-bottom: 30px;} */
+/* #cat-sub  {} */
+#mid div h4 {line-height: 80px; 
+             text-align: center;}
+#mid div div h6 {font-weight: 600;
+                 width: 100%;}
+#mid div div button { width: 70%; height: 50px;
+                      border:0;
+                      display: block;
+                      margin: 0 auto;
+                      }
+#mid div div button a { color:white;
+                        /* width: 230px;  */
+                        height: 50px;
+                        text-align: center;
+                        line-height: 50px;
+                        font-weight: 600;
+                        text-decoration: none;}
