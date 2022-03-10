@@ -40,6 +40,30 @@ window.addEventListener('resize', function(){
         topLine.style.width="100%";
     }
 });
+function joinCheck(){
+    var userId = document.getElementById("id");
+    var userPw = document.getElementById("pw");
+    var userName = document.getElementById("name");
+    var nickname = document.getElementById("nickname");
+    var Addr = document.getElementById("addr");
+    var Phone = document.getElementById("phone");
+    var reg_frm = document.querySelector("#reg_frm");
+    if(userId.value.length==0){
+      alert("아이디를 입력하세요.")
+    } else if(userPw.value.length==0) {
+      alert("비밀번호를 입력하세요.")
+    } else if(userName.value.length==0) {
+      alert("이름 입력하세요.")
+    } else if(nickname.value.length==0) {
+      alert("리뷰작성시 노출할 별명을 입력해주세요.")
+    } else if(Addr.value.length==0) {
+      alert("주소를 입력하세요.")
+    } else if(Phone.value.length==0) {
+      alert("전화번호를 입력하세요.")
+    }  
+
+    reg_frm.submit();
+}
 function sub_menu(){
     var sub = document.getElementsByClassName("sub-menu-inner");
     var num = event.target.id;
