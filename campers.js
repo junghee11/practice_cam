@@ -50,19 +50,25 @@ function joinCheck(){
     var reg_frm = document.querySelector("#reg_frm");
     if(userId.value.length==0){
       alert("아이디를 입력하세요.")
+      reg_frm.id.focus();
     } else if(userPw.value.length==0) {
       alert("비밀번호를 입력하세요.")
+      reg_frm.pw.focus();
     } else if(userName.value.length==0) {
       alert("이름 입력하세요.")
+      reg_frm.name.focus();
     } else if(nickname.value.length==0) {
       alert("리뷰작성시 노출할 별명을 입력해주세요.")
+      reg_frm.nickname.focus();
     } else if(Addr.value.length==0) {
       alert("주소를 입력하세요.")
+      reg_frm.addr.focus();
     } else if(Phone.value.length==0) {
       alert("전화번호를 입력하세요.")
-    }  
-
-    reg_frm.submit();
+      reg_frm.phone.focus();
+    }  else {
+        reg_frm.submit();
+    }
 }
 function sub_menu(){
     var sub = document.getElementsByClassName("sub-menu-inner");

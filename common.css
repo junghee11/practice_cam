@@ -31,7 +31,7 @@
 #until-right ul a:hover {color:cornflowerblue;}
 /* #until-right ul li:nth-child(1)::after {padding-left:15px; content:"|"}
 #until-right ul li:nth-child(2)::after {padding-left:15px; content:"|"} */
-#until-right ul li::before {padding-right:15px; padding-left:15px; 
+#until-right ul li a::before {padding-right:15px; padding-left:15px; 
                             content:"|";
                             color: gray; }
 .container {padding:0;
@@ -58,6 +58,8 @@
 #main-nav li a:hover {color:black;}
 #main-nav li a {text-decoration: none;
                 color:gray;
+                width: 40px;
+                height:25px;
                 /* font-weight: 600; */
                 font-size: 19px;}
 #header-right { border : 1px solid gray;

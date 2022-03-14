@@ -93,15 +93,61 @@
             <div style="width:100%; height:80px; margin-top:20px;">
                 <h4>MyPage</h4>
             </div>
-            <div style="margin-top :20px; display: flex;">
-                <div style="width: 20%; margin-right:100px;">
-                    <ul>
-                        <li>정보수정</li>
-                        <li>관심상품</li>
-                        <li>장바구니</li>
-                        <li>내가 쓴 리뷰</li>
-                    </ul>
-                </div>
+            <!-- <div style="margin-top :20px; display: flex;"> -->
+                <!-- <div style="width: 20%; margin-right:100px;"> -->
+                    <div class="d-flex align-items-start">
+                        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                            <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">나의정보</button>
+                            <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">찜한상품</button>
+                            <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">장바구니</button>
+                            <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">내 리뷰</button>
+                        </div>
+                        <div class="tab-content" id="v-pills-tabContent">
+                            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                                <div style="margin-left: 25px;">
+                                    <h5 class='mb-4' style="font-weight:600;">나의정보</h5>
+                                </div>
+                                <form class="row g-4" name="reg_frm" id="reg_frm">
+                                    <div class="col-md-12">
+                                    <label for="id">ID : </label>
+                                    <input type="text" id="id">
+                                    </div>
+                                    <div class="col-md-12">
+                                    <label for="pw">Password : </label>
+                                    <input type="text" id="pw">
+                                    </div>
+                                    <div class="col-12">
+                                    <label for="name">Name : </label>
+                                    <input type="text" id="name">
+                                    </div>
+                                    <div class="col-12">
+                                    <label for="addr">Address : </label>
+                                    <input type="text" id="addr">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="phone">Phone : </label>
+                                        <input type="text" name="phone" style="display:inline;">
+                                    </div>
+                                    <div class="col-3">
+                                    <input type="submit" class="btn btn-primary form-control" value="정보 수정하기" />
+                                    </div>
+                                    <div class="col-3">
+                                        <button type="reset" class="btn btn-secondary form-control">탈퇴하기</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+                            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+                            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+                        </div>
+                    </div>
+                    <!-- <ul>
+                        <li><a href="modify.jsp">내 계정</a></li>
+                        <li><a href="#">관심상품</a></li>
+                        <li><a href="basket.html">장바구니</a></li>
+                        <li><a href="#">내가 쓴 리뷰</a></li>
+                    </ul> -->
+                <!-- </div>
                 <div style="width: 80%;">
                     <h4>내정보</h4>
                     <hr>
@@ -113,8 +159,8 @@
                     <hr>
                     <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 
-                </div>
-            </div>
+                </div> -->
+            <!-- </div> -->
         </div>
     </div>
     <div id='footer'>
