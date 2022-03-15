@@ -11,12 +11,20 @@
     <title>review</title>
     <style>
         #writeContent table {width:700px; 
+            border: 1px solid rgb(92, 92, 92);
+                     border-collapse: collapse;
                      margin:20px; 
                      height:400px;
                      color:rgb(92, 92, 92);
                      background-color:rgb(182, 202, 248);}
-
-        #writeContent table td {margin:15px;}
+        #writeContent table td {margin:15px;
+                    border: 1px solid rgb(92, 92, 92);}
+        #writeContent table tr td:first-child {height:30px; 
+                    line-height: 30px; 
+                    width: 110px; text-align: center; 
+                    font-weight: 600;}
+        #writeContent table tr td:last-child {width:450px;}
+        
         #writeContent table td select {width: 150px;}
         #writeContent table td textarea {width: 500px;}
         #submitReview input {width:120px; height:40px;
@@ -114,27 +122,29 @@
             <div style="margin-top : 5px;">
                 <form id="writeContent" action="write.do">
                     <table>
-                            <!-- 작성자id -->
-                            <!-- <td><input type="hidden" name="rName" size="50"></td>  -->
                         <tr>
-                            <td style="height:40px; line-height: 70px; width: 110px; text-align: center; font-weight: 600;">제품명</td>
-                            <td>
-                                <!-- <label for=""></label> -->
-                                <select name="rTitle" id="">
-                                <option value="tent1">텐트</option>
-                                <option value="cook1">요리</option>
-                                <option value="furniture1">가구</option>
-                                <option value="green">그린</option>
-                                </select>
-                            </td>
+                            <td>No.</td>
+                            <td>&nbsp;${dto.review_idx }</td>
+                        </tr>  
+                        <tr>
+                            <td>조회수</td>
+                            <td>&nbsp;${dto.rHit}</td>
+                        </tr>
+                        <tr>
+                            <td>작성자</td>
+                            <td>&nbsp;${review_view.rName}</td>
+                        </tr>
+                        <tr>
+                            <td >제품명</td>
+                            <td>&nbsp;${dto.rTitle}</td>
                         </tr>
                         <tr sytle="height:350px;">
-                            <td style="text-align: center; font-weight: 600;">내용</td>
-                            <td><textarea name="rContent" rows="10"></textarea></td>
+                            <td >후기</td>
+                            <td style="height:180px;">&nbsp;${dto.rContent}</td>
                         </tr>
                         <tr style="text-align: right; height:55px;">
-                            <td></td>
-                            <td id="submitReview"  colspan="2"><input type="submit" value="리뷰작성"><a href="review_list.do">목록으로 돌아가기</a></td>
+                            <td style="border:none;"></td>
+                            <td style="border:none;" id="submitReview"  colspan="2"><input type="submit" value="답변하기"><a href="reply_view.do?review_idx={review_view.review.idx}">목록으로 돌아가기</a></td>
                         </tr>
                     </table>
                 </form>
