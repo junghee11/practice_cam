@@ -5,10 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="write_view.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <title>review</title>
+    <style>
+        #writeContent table {width:700px; 
+                     margin:20px; 
+                     height:400px;
+                     color:rgb(92, 92, 92);
+                     background-color:rgb(182, 202, 248);}
+
+        #writeContent table td {margin:15px;}
+        #writeContent table td select {width: 150px;}
+        #writeContent table td textarea {width: 500px;}
+        #submitReview input {width:120px; height:40px;
+                            background-color:midnightblue;
+                            border:none; color:white;
+                            margin: 0 150px 10px 0;
+                            text-decoration: none;}
+        #submitReview a {margin-right:15px; 
+                line-height:50px; color:rgb(92, 92, 92);
+                text-decoration: none;}
+    </style>
 </head>
 <body>
     <header>
@@ -92,54 +112,33 @@
             <div style="width:100%; height:50px; margin-top:20px; background-color:cornflowerblue;">
                 <h5 style="color:white; line-height: 50px; margin-left:20px;">★☆사용후기☆★</h5>
             </div>
-            <div style="margin-top : 5px; text-align: center;">
-                <table class ="table table-primary table-striped" >
-                    <thead>
-                    <tr>
-                        <td style="width:10%">글번호</td>
-                        <td style="width:10%">작성자</td>
-                        <td style="width:10%">제품명</td>
-                        <td style="width:50%">후기</td>
-                        <td style="width:10%">날짜</td>
-                        <td style="width:10%">히트</td>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                    <td>Id</td>
-                    <td>Name</td>
-                    <td>
-                        <a href="#">title</a>
-                    </td>
-                    <td>Content</td>
-                    <td>Date</td>
-                    <td>Hit</td>
-                    </tr>
-                    <tr>
-                        <td>Id</td>
-                        <td>Name</td>
-                        <td>
-                            <a href="#">title</a>
-                        </td>
-                        <td>Content</td>
-                        <td>Date</td>
-                        <td>Hit</td>
-                    </tr>
-                    <tr>
-                        <td>Id</td>
-                        <td>Name</td>
-                        <td>
-                            <a href="#">title</a>
-                        </td>
-                        <td>Content</td>
-                        <td>Date</td>
-                        <td>Hit</td>
-                    </tr>
-                    <tr>
-                    <td clospan="5"><a href="write_view.do">글작성</a></td>
-                    </tr>
-                    </tbody>
-                </table>
+            <div style="margin-top : 5px;">
+                <form id="writeContent" action="write.do">
+                    <table>
+                            <!-- 작성자id -->
+                            <!-- <td><input type="hidden" name="rName" size="50"></td>  -->
+                        <tr>
+                            <td style="height:40px; line-height: 70px; width: 110px; text-align: center; font-weight: 600;">제품명</td>
+                            <td>
+                                <!-- <label for=""></label> -->
+                                <select name="rTitle" id="">
+                                <option value="tent1">텐트</option>
+                                <option value="cook1">요리</option>
+                                <option value="furniture1">가구</option>
+                                <option value="green">그린</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr sytle="height:350px;">
+                            <td style="text-align: center; font-weight: 600;">내용</td>
+                            <td><textarea name="rContent" rows="10"></textarea></td>
+                        </tr>
+                        <tr style="text-align: right; height:55px;">
+                            <td></td>
+                            <td id="submitReview"  colspan="2"><input type="submit" value="리뷰작성"><a href="review_list.do">목록으로 돌아가기</a></td>
+                        </tr>
+                    </table>
+                </form>
             </div>
         </div>
     </div>
