@@ -27,7 +27,7 @@
         
         #writeContent table td select {width: 150px;}
         #writeContent table td textarea {width: 500px;}
-        #submitReview input {width:120px; height:40px;
+        #submitReview input {width:70px; height:40px;
                             background-color:midnightblue;
                             border:none; color:white;
                             margin: 0 150px 10px 0;
@@ -144,7 +144,20 @@
                         </tr>
                         <tr style="text-align: right; height:55px;">
                             <td style="border:none;"></td>
-                            <td style="border:none;" id="submitReview"  colspan="2"><input type="submit" value="답변하기"><a href="reply_view.do?review_idx={review_view.review.idx}">목록으로 돌아가기</a></td>
+                            <td style="border:none;" id="submitReview"  colspan="2">
+                            <input type="submit" style="margin: 0 0 10px 0;" value="답변">
+                            &nbsp;&nbsp;<input type="button" style="margin: 0 0 10px 0; background-color: rgb(73, 73, 73);" onclick="submitModify()" value="수정">
+                            <script>
+                                var review_idx = document.getElementById("review_idx")
+                                    var modifyContent = document.getElementById("rContent")
+                                function submitModify(){
+                                    
+                                    document.myForm.action = "place.html"
+                                }
+                                </script>
+                            &nbsp;&nbsp;<a href="delete.do?review_idx=${content_view.review_idx}">삭제</a>
+                            <a href="review_list.do">목록으로 돌아가기</a>
+                        </td>
                         </tr>
                     </table>
                 </form>
