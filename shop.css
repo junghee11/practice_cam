@@ -23,6 +23,25 @@
             border: 2px solid rgb(80, 80, 80);
             
 }
+#item_sum_mid { margin: 25px 0; }
+#item_sum_mid tr { height:40px; line-height:40px; }
+#item_sum_bottom tr { height:20px; 
+        text-align: center;
+        line-height:20px; }
+#item_sum_bottom {margin: 25px 0;}
+.item_button {
+        text-align: center;
+        margin: 25px 8px;
+        background-color: lightgray;
+        color: rgb(80, 80, 80);
+        text-align: center;
+        line-height: 40px;
+        font-weight: 600;
+        width: 170px;
+        height: 50px;
+        text-decoration:none;
+        border:none;
+        }
 .card {overflow: hidden;}
 .card img {width: 400px; height: 400px;}
 .card img:hover {transform: scale(1.2);
